@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Subway Platform</name>
-    <sid>8873350371196689</sid>
-    <event-sheet>01-Main_Controls</event-sheet>
+    <name>03_Scene3</name>
+    <sid>6382317294496444</sid>
+    <event-sheet>01_Scene1</event-sheet>
     <size>
         <width>854</width>
-        <height>2560</height>
+        <height>480</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="8722530541249526">
+        <layer name="Layer 0" sid="6166178787323041">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>

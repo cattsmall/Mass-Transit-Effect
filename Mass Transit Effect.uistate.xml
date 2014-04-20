@@ -10,11 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>Subway Platform</layout>
-        <layout active="1">Subway Entrance</layout>
-        <event-sheet>01-Main_Controls</event-sheet>
-        <event-sheet>00-Title_Screen</event-sheet>
-        <event-sheet>1-Subway-Station</event-sheet>
+        <layout>2_Subway_Platform</layout>
+        <layout>1_Subway_Entrance</layout>
+        <layout>00_Title Screen</layout>
+        <layout>01_Scene1</layout>
+        <event-sheet>000_Main_Controls</event-sheet>
+        <event-sheet>00_Title_Screen</event-sheet>
+        <event-sheet>1_Subway_Entrance</event-sheet>
+        <event-sheet active="1">2_Subway_Platform</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

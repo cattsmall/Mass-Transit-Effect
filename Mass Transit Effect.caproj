@@ -11,6 +11,7 @@
     <saved-with-version>16300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -53,16 +54,31 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text_Title" sid="8118176921196449">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text_CTA" sid="2609285235437211">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Subway Entrance.xml</layout>
-        <layout>Subway Platform.xml</layout>
+        <layout>00_Title Screen.xml</layout>
+        <layout>01_Scene1.xml</layout>
+        <layout>02_Scene2.xml</layout>
+        <layout>03_Scene3.xml</layout>
+        <layout>04_Scene4.xml</layout>
+        <layout>1_Subway_Entrance.xml</layout>
+        <layout>2_Subway_Platform.xml</layout>
+        <layout>WinState.xml</layout>
+        <layout>LoseState.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>01-Main_Controls.xml</event-sheet>
-        <event-sheet>00-Title_Screen.xml</event-sheet>
-        <event-sheet>1-Subway-Station.xml</event-sheet>
+        <event-sheet>000_Main_Controls.xml</event-sheet>
+        <event-sheet>00_Title_Screen.xml</event-sheet>
+        <event-sheet>1_Subway_Entrance.xml</event-sheet>
+        <event-sheet>01_Scene1.xml</event-sheet>
+        <event-sheet>2_Subway_Platform.xml</event-sheet>
     </event-folder>
     <global-instances />
     <sounds-folder expanded="1" />
