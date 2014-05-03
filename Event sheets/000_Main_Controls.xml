@@ -73,12 +73,15 @@
                     <conditions>
                         <condition id="-1" name="Compare X" sid="1955441252813429" type="Player">
                             <param id="0" name="Comparison">5</param>
-                            <param id="1" name="X co-ordinate">Player.Width</param>
+                            <param id="1" name="X co-ordinate">Player.Width/2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-17" name="Move forward" sid="6915426964109236" type="Player">
                             <param id="0" name="Distance">-Player.Speed</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="7474295844475878" type="Player">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -103,6 +106,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="7" name="Set mirrored" sid="7675507712059859" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
                         <action id="-17" name="Move forward" sid="5940621110244899" type="Player">
                             <param id="0" name="Distance">Player.Speed</param>
                         </action>
