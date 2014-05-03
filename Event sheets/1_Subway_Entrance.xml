@@ -2,5 +2,7 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>1_Subway_Entrance</name>
-    <events />
+    <events>
+        <include>000_Main_Controls</include>
+    </events>
 </c2eventsheet>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>01_Scene1</name>
-    <sid>429956325124509</sid>
-    <event-sheet>01_Scene1</event-sheet>
+    <name>2_Platform_Entrance</name>
+    <sid>8873350371196689</sid>
+    <event-sheet>000_Main_Controls</event-sheet>
     <size>
         <width>7860</width>
         <height>1079</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="4142824368118457">
+        <layer name="Layer 0" sid="8722530541249526">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>

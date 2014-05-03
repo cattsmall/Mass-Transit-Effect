@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>2_Subway_Platform</name>
-    <sid>8873350371196689</sid>
+    <name>4_Platform_Exit</name>
+    <sid>447513720954139</sid>
     <event-sheet>000_Main_Controls</event-sheet>
     <size>
-        <width>854</width>
-        <height>2560</height>
+        <width>7860</width>
+        <height>1079</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="8722530541249526">
+        <layer name="Layer 0" sid="7478981477918495">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>

@@ -2,5 +2,113 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>000_Main_Controls</name>
-    <events />
+    <events>
+        <comment>Keyboard inputs</comment>
+        <event-block any="1" sid="2764681892710151">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3607110361270686" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="5791244572428173" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2350251040422105">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1729687751424001" type="Player">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">809.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="5341909095788389" type="Player">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">-Player.Speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="516519831670806">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8397317402050262" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="2934147874504561" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1442527055611598">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="6553134550941423" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">1079</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="4510370448977209" type="Player">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">Player.Speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="2051172360868955">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7909020959444766" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="1441214278152203" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="627882822026528">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="1955441252813429" type="Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">Player.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="6915426964109236" type="Player">
+                            <param id="0" name="Distance">-Player.Speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="547186962371471">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="640186872136513" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="5793683559808666" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7137911484205457">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="2255432461333773" type="Player">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">LayoutWidth - Player.Width</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="5940621110244899" type="Player">
+                            <param id="0" name="Distance">Player.Speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
 </c2eventsheet>

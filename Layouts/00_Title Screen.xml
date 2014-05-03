@@ -4,8 +4,8 @@
     <sid>7505417862969097</sid>
     <event-sheet>00_Title_Screen</event-sheet>
     <size>
-        <width>854</width>
-        <height>480</height>
+        <width>1920</width>
+        <height>1079</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -31,7 +31,7 @@
                     <properties>
                         <text>MASS TRANSIT EFFECT</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Black,-56,900,0</font>
+                        <font>Arial Black,-96,900,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -42,11 +42,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1</x>
-                        <y>133</y>
+                        <x>8</x>
+                        <y>339</y>
                         <z>0</z>
-                        <width>852</width>
-                        <height>178</height>
+                        <width>1906</width>
+                        <height>324</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -58,7 +58,7 @@
                     <properties>
                         <text>Start Game</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-32,700,0</font>
+                        <font>Arial,-96,700,0</font>
                         <color>0,0,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -69,11 +69,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>248.5</x>
-                        <y>269</y>
+                        <x>314</x>
+                        <y>643</y>
                         <z>0</z>
-                        <width>357</width>
-                        <height>88</height>
+                        <width>1292</width>
+                        <height>144</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
