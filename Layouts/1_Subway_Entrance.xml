@@ -114,11 +114,20 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Speed>269.75</Speed>
+                        <Speed>1079</Speed>
+                        <newX>0</newX>
+                        <newY>0</newY>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
                             <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>269</pixels-per-step>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
