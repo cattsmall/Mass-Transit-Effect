@@ -19,8 +19,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>04_Scene4</layout>
         <event-sheet active="1">000_Main_Controls</event-sheet>
         <event-sheet>00_Title_Screen</event-sheet>
-        <event-sheet>1_Subway_Entrance</event-sheet>
-        <event-sheet>2_Platform_Entrance</event-sheet>
+        <event-sheet>1_Subway_Entrance_Events</event-sheet>
+        <event-sheet>2_Platform_Entrance_Events</event-sheet>
+        <event-sheet>3_Inside_Train_Events</event-sheet>
+        <event-sheet>4_Platform_Exit_Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,5 +30,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="0" name="Portals" />
+    </families-expanded>
 </c2uistate>

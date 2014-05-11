@@ -6,10 +6,10 @@
         <comment>Keyboard inputs</comment>
         <event-block any="1" sid="2764681892710151">
             <conditions>
-                <condition id="0" name="On key pressed" sid="3607110361270686" type="Keyboard">
+                <condition id="2" name="Key is down" sid="4454630814704299" type="Keyboard">
                     <param id="0" name="Key">38 (Up arrow)</param>
                 </condition>
-                <condition id="0" name="On key pressed" sid="5791244572428173" type="Keyboard">
+                <condition id="2" name="Key is down" sid="2345525126249927" type="Keyboard">
                     <param id="0" name="Key">87 (W)</param>
                 </condition>
             </conditions>
@@ -26,7 +26,7 @@
                     <actions>
                         <action id="-10" name="Set value" sid="7007565400120779" type="Player">
                             <param id="0" name="Instance variable">newY</param>
-                            <param id="1" name="Value">Player.Y - Player.Speed</param>
+                            <param id="1" name="Value">Player.Y - (Player.Speed/4)</param>
                         </action>
                         <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="3794183066975026" type="Player">
                             <param id="0" name="Acceleration">90</param>
@@ -40,7 +40,13 @@
                         <action id="-16" name="Wait" sid="1241789686196234" type="System">
                             <param id="0" name="Seconds">0.252</param>
                         </action>
+                        <action id="-26" name="Move to layer" sid="6570475052419425" type="Player">
+                            <param id="0" name="Layer">1</param>
+                        </action>
                         <action behavior="CustomMovement" id="0" name="Stop" sid="6819018290229207" type="Player" />
+                        <action id="-2" name="Set Y" sid="2965880315747282" type="Player">
+                            <param id="0" name="Y">809.25</param>
+                        </action>
                         <action id="-10" name="Set value" sid="6905114760012735" type="Player">
                             <param id="0" name="Instance variable">newY</param>
                             <param id="1" name="Value">0</param>
@@ -51,10 +57,10 @@
         </event-block>
         <event-block any="1" sid="516519831670806">
             <conditions>
-                <condition id="0" name="On key pressed" sid="8397317402050262" type="Keyboard">
+                <condition id="2" name="Key is down" sid="196730180114193" type="Keyboard">
                     <param id="0" name="Key">40 (Down arrow)</param>
                 </condition>
-                <condition id="0" name="On key pressed" sid="2934147874504561" type="Keyboard">
+                <condition id="2" name="Key is down" sid="8454358117460581" type="Keyboard">
                     <param id="0" name="Key">83 (S)</param>
                 </condition>
             </conditions>
@@ -71,7 +77,7 @@
                     <actions>
                         <action id="-10" name="Set value" sid="2790378377464407" type="Player">
                             <param id="0" name="Instance variable">newY</param>
-                            <param id="1" name="Value">Player.Y + Player.Speed</param>
+                            <param id="1" name="Value">Player.Y + (Player.Speed/4)</param>
                         </action>
                         <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="5936335696652874" type="Player">
                             <param id="0" name="Acceleration">90</param>
@@ -85,7 +91,13 @@
                         <action id="-16" name="Wait" sid="2819799567655432" type="System">
                             <param id="0" name="Seconds">0.252</param>
                         </action>
+                        <action id="-26" name="Move to layer" sid="7877981686996739" type="Player">
+                            <param id="0" name="Layer">2</param>
+                        </action>
                         <action behavior="CustomMovement" id="0" name="Stop" sid="1491596509859952" type="Player" />
+                        <action id="-2" name="Set Y" sid="8024416692934165" type="Player">
+                            <param id="0" name="Y">1079</param>
+                        </action>
                         <action id="-10" name="Set value" sid="2009109728184083" type="Player">
                             <param id="0" name="Instance variable">newY</param>
                             <param id="1" name="Value">0</param>
@@ -96,10 +108,10 @@
         </event-block>
         <event-block any="1" sid="2051172360868955">
             <conditions>
-                <condition id="0" name="On key pressed" sid="7909020959444766" type="Keyboard">
+                <condition id="2" name="Key is down" sid="7848480404584445" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
                 </condition>
-                <condition id="0" name="On key pressed" sid="1441214278152203" type="Keyboard">
+                <condition id="2" name="Key is down" sid="3859915537026201" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
@@ -119,7 +131,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="9685835969745452" type="Player">
                             <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Value">Player.X - Player.Speed</param>
+                            <param id="1" name="Value">Player.X - (Player.Speed/4)</param>
                         </action>
                         <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="4221480873468401" type="Player">
                             <param id="0" name="Angle">180</param>
@@ -132,6 +144,9 @@
                             <param id="0" name="Seconds">0.252</param>
                         </action>
                         <action behavior="CustomMovement" id="0" name="Stop" sid="9058445699560025" type="Player" />
+                        <action id="-1" name="Set X" sid="6169510654711341" type="Player">
+                            <param id="0" name="X">Player.newX</param>
+                        </action>
                         <action id="-10" name="Set value" sid="7392798493037762" type="Player">
                             <param id="0" name="Instance variable">newX</param>
                             <param id="1" name="Value">0</param>
@@ -142,10 +157,10 @@
         </event-block>
         <event-block any="1" sid="547186962371471">
             <conditions>
-                <condition id="0" name="On key pressed" sid="640186872136513" type="Keyboard">
+                <condition id="2" name="Key is down" sid="640186872136513" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>
                 </condition>
-                <condition id="0" name="On key pressed" sid="5793683559808666" type="Keyboard">
+                <condition id="2" name="Key is down" sid="5793683559808666" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
@@ -165,7 +180,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="1344277196159466" type="Player">
                             <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Value">Player.X + Player.Speed</param>
+                            <param id="1" name="Value">Player.X + (Player.Speed/4)</param>
                         </action>
                         <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="4825833512050945" type="Player">
                             <param id="0" name="Angle">0</param>
@@ -178,6 +193,9 @@
                             <param id="0" name="Seconds">0.252</param>
                         </action>
                         <action behavior="CustomMovement" id="0" name="Stop" sid="1474973075642076" type="Player" />
+                        <action id="-1" name="Set X" sid="9731063260916195" type="Player">
+                            <param id="0" name="X">Player.newX</param>
+                        </action>
                         <action id="-10" name="Set value" sid="3901072411096166" type="Player">
                             <param id="0" name="Instance variable">newX</param>
                             <param id="1" name="Value">0</param>
@@ -185,6 +203,14 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="6957361762745906">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="472802061048609" type="Player">
+                    <param id="0" name="Object">Portals</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

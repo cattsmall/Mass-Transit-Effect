@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>2_Platform_Entrance_Events</name>
+    <events>
+        <include>000_Main_Controls</include>
+        <event-block sid="6956538514623767">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1817992998020305" type="Player">
+                    <param id="0" name="Object">Portals</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="7396531363016332" type="System">
+                    <param id="0" name="Layout">2_Platform_Entrance</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

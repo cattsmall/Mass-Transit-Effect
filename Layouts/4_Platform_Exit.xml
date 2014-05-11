@@ -2,7 +2,7 @@
 <c2layout>
     <name>4_Platform_Exit</name>
     <sid>447513720954139</sid>
-    <event-sheet>000_Main_Controls</event-sheet>
+    <event-sheet>4_Platform_Exit_Events</event-sheet>
     <size>
         <width>7860</width>
         <height>1079</height>

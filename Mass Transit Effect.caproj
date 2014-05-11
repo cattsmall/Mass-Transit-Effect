@@ -78,19 +78,37 @@
         <object-type name="Text_CTA" sid="2609285235437211">
             <plugin id="Text" />
         </object-type>
-        <object-type name="TiledBackground" sid="8064747621882126">
+        <object-type name="TiledBackgroundStreet" sid="8064747621882126">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
         <object-type name="Keyboard" sid="6650578836334862">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="TiledFloor" sid="2054286376661645">
+        <object-type name="TiledFloorConcrete" sid="2054286376661645">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="PortalHorizontal" sid="6883486244429679">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="310093918021054" speed="5">
+                    <frame duration="1" hotspotX="-0.880597" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledFloorPlatform" sid="3930664689764018">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Portals" plugin-id="Sprite" sid="6352106301310882">
+            <members>
+                <member>PortalHorizontal</member>
+            </members>
+        </family>
+    </families>
     <layout-folder expanded="1">
         <layout>00_Title Screen.xml</layout>
         <layout>01_Scene1.xml</layout>
@@ -107,9 +125,11 @@
     <event-folder expanded="1">
         <event-sheet>000_Main_Controls.xml</event-sheet>
         <event-sheet>00_Title_Screen.xml</event-sheet>
-        <event-sheet>1_Subway_Entrance.xml</event-sheet>
+        <event-sheet>1_Subway_Entrance_Events.xml</event-sheet>
         <event-sheet>01_Scene1.xml</event-sheet>
-        <event-sheet>2_Platform_Entrance.xml</event-sheet>
+        <event-sheet>2_Platform_Entrance_Events.xml</event-sheet>
+        <event-sheet>3_Inside_Train_Events.xml</event-sheet>
+        <event-sheet>4_Platform_Exit_Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />

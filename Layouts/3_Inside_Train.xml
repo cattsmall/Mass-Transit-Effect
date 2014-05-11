@@ -2,7 +2,7 @@
 <c2layout>
     <name>3_Inside_Train</name>
     <sid>2952033828950799</sid>
-    <event-sheet>000_Main_Controls</event-sheet>
+    <event-sheet>3_Inside_Train_Events</event-sheet>
     <size>
         <width>7860</width>
         <height>1079</height>
