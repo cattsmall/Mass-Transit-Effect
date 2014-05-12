@@ -18,6 +18,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -49,6 +50,7 @@
                 <instance-variable name="Speed" sid="2215153207837187" type="number" />
                 <instance-variable name="newX" sid="4424080911186574" type="number" />
                 <instance-variable name="newY" sid="2730787819121599" type="number" />
+                <instance-variable name="moveDir" sid="8324489302783168" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="ScrollTo" sid="367017543846175">
@@ -64,11 +66,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="InteractiveNPC" sid="4453418379633453">
+        <object-type name="NPCLeft" sid="4453418379633453">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2482906483303578" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -101,12 +103,43 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="NPCRight" sid="9687448549907606">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1164140364706808" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Portals" plugin-id="Sprite" sid="6352106301310882">
             <members>
                 <member>PortalHorizontal</member>
             </members>
+        </family>
+        <family name="NPCs" plugin-id="Sprite" sid="4416272643633587">
+            <members>
+                <member>NPCLeft</member>
+                <member>NPCRight</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="newX" sid="8806881257634505" type="number" />
+                <instance-variable name="newY" sid="842339062990157" type="number" />
+                <instance-variable name="spawnX" sid="8903702408993498" type="number" />
+                <instance-variable name="spawnY" sid="6628312882781305" type="number" />
+                <instance-variable name="Speed" sid="5394312360595931" type="number" />
+                <instance-variable name="isCollidedWith" sid="9949003347727155" type="boolean" />
+                <instance-variable name="moveDir" sid="8042045202927863" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="3774302205323852">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="39836793879385">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder expanded="1">

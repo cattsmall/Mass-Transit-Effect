@@ -84,23 +84,46 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="InteractiveNPC" uid="1">
+                <instance type="NPCLeft" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <newX>0</newX>
+                        <newY>0</newY>
+                        <spawnX>0</spawnX>
+                        <spawnY>0</spawnY>
+                        <Speed>1079</Speed>
+                        <isCollidedWith>false</isCollidedWith>
+                        <moveDir>left</moveDir>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
+                        <x>136</x>
                         <y>809.25</y>
                         <z>0</z>
                         <width>269.75</width>
                         <height>539.5</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -117,6 +140,7 @@
                         <Speed>1079</Speed>
                         <newX>0</newX>
                         <newY>0</newY>
+                        <moveDir></moveDir>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -186,23 +210,46 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="InteractiveNPC" uid="10">
+                <instance type="NPCRight" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <newX>0</newX>
+                        <newY>0</newY>
+                        <spawnX>0</spawnX>
+                        <spawnY>0</spawnY>
+                        <Speed>1079</Speed>
+                        <isCollidedWith>false</isCollidedWith>
+                        <moveDir>right</moveDir>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>269</x>
+                        <x>675.5</x>
                         <y>1079</y>
                         <z>0</z>
                         <width>269.75</width>
                         <height>539.5</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

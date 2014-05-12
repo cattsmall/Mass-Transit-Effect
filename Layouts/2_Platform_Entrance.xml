@@ -91,6 +91,7 @@
                         <Speed>1079</Speed>
                         <newX>0</newX>
                         <newY>0</newY>
+                        <moveDir></moveDir>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
