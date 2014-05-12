@@ -98,7 +98,7 @@
                         <spawnY>0</spawnY>
                         <Speed>1079</Speed>
                         <isCollidedWith>false</isCollidedWith>
-                        <moveDir>left</moveDir>
+                        <angerLevel>0</angerLevel>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -110,7 +110,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -199,10 +199,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>7734</x>
-                        <y>747</y>
+                        <y>539.5</y>
                         <z>0</z>
                         <width>67</width>
-                        <height>662</height>
+                        <height>1077</height>
                         <depth>0</depth>
                         <hotspotX>-0.880596995</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -224,7 +224,7 @@
                         <spawnY>0</spawnY>
                         <Speed>1079</Speed>
                         <isCollidedWith>false</isCollidedWith>
-                        <moveDir>right</moveDir>
+                        <angerLevel>0</angerLevel>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -236,7 +236,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

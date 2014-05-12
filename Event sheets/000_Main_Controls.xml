@@ -406,6 +406,57 @@
                 <action id="-9" name="Destroy" sid="8273892821479331" type="NPCs" />
             </actions>
         </event-block>
-        <comment>Collision</comment>
+        <event-block sid="2373371793501656">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="6298258028074847" type="NPCs">
+                    <param id="0" name="Instance variable">isCollidedWith</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="375500416306955">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9433684644057774" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="7601106539615699" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7855333810018896">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6559863376415385" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1560724242712591" type="NPCs">
+                            <param id="0" name="Animation">&quot;Angry&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Set Random anger level</comment>
+        <event-block sid="5167265529032608">
+            <conditions>
+                <condition id="-18" name="On created" sid="9407849035913932" type="NPCs" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2540298247324021" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Value">floor(random(0,3))</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

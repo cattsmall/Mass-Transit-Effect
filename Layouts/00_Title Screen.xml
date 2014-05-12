@@ -2,7 +2,7 @@
 <c2layout>
     <name>00_Title Screen</name>
     <sid>7505417862969097</sid>
-    <event-sheet>00_Title_Screen</event-sheet>
+    <event-sheet>00_Title_Screen_Events</event-sheet>
     <size>
         <width>1920</width>
         <height>1079</height>
@@ -56,7 +56,7 @@
                 </instance>
                 <instance type="Text_CTA" uid="3">
                     <properties>
-                        <text>Start Game</text>
+                        <text>Press Enter to Start</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-96,700,0</font>
                         <color>0,0,255</color>
