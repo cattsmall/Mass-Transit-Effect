@@ -10,12 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">2_Platform_Entrance</layout>
+        <layout>2_Platform_Entrance</layout>
         <layout>1_Subway_Entrance</layout>
         <layout>00_Title Screen</layout>
         <layout>01_Scene1</layout>
         <layout>4_Platform_Exit</layout>
-        <layout>3_Inside_Train</layout>
+        <layout active="1">3_Inside_Train</layout>
         <layout>04_Scene4</layout>
         <layout>WinState</layout>
         <layout>LoseState</layout>
