@@ -4,6 +4,18 @@
     <name>1_Subway_Entrance_Events</name>
     <events>
         <include>000_Main_Controls</include>
+        <event-block sid="9963854324355296">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1397275464720293" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1240147220508406" type="Player">
+                    <param id="0" name="Instance variable">MovementEnabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>End of Level</comment>
         <event-block sid="7982346441424298">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="5096709152684024" type="Player">

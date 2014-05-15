@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>00_Title_Screen_Events</name>
     <events>
+        <variable constant="0" name="EndingState" sid="377436956285627" static="0" type="text">good</variable>
+        <variable constant="0" name="PlayerAngerLevel" sid="123142366376136" static="0" type="number">0</variable>
         <event-block sid="267160231794786">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4305393388251493" type="Keyboard">
@@ -12,6 +14,14 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="8143713427513658" type="System">
                     <param id="0" name="Layout">1_Subway_Entrance</param>
+                </action>
+                <action id="-9" name="Set value" sid="2581585534614134" type="System">
+                    <param id="0" name="Variable">EndingState</param>
+                    <param id="1" name="Value">&quot;good&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="3438366892529794" type="System">
+                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

@@ -10,19 +10,24 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>2_Platform_Entrance</layout>
+        <layout active="1">2_Platform_Entrance</layout>
         <layout>1_Subway_Entrance</layout>
-        <layout active="1">00_Title Screen</layout>
+        <layout>00_Title Screen</layout>
         <layout>01_Scene1</layout>
         <layout>4_Platform_Exit</layout>
         <layout>3_Inside_Train</layout>
         <layout>04_Scene4</layout>
+        <layout>WinState</layout>
+        <layout>LoseState</layout>
         <event-sheet>000_Main_Controls</event-sheet>
         <event-sheet>00_Title_Screen_Events</event-sheet>
         <event-sheet>1_Subway_Entrance_Events</event-sheet>
         <event-sheet>2_Platform_Entrance_Events</event-sheet>
         <event-sheet>3_Inside_Train_Events</event-sheet>
         <event-sheet>4_Platform_Exit_Events</event-sheet>
+        <event-sheet>WinState_Events</event-sheet>
+        <event-sheet>LoseState_Events</event-sheet>
+        <event-sheet>01_Scene1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -31,7 +36,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="Portals" />
-        <family expanded="1" name="NPCs" />
+        <family expanded="1" name="Portals" />
+        <family expanded="0" name="NPCs" />
     </families-expanded>
 </c2uistate>

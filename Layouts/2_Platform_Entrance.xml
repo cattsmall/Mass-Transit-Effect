@@ -4,7 +4,7 @@
     <sid>8873350371196689</sid>
     <event-sheet>2_Platform_Entrance_Events</event-sheet>
     <size>
-        <width>7860</width>
+        <width>5860</width>
         <height>1079</height>
     </size>
     <margins>
@@ -38,7 +38,7 @@
                         <x>0</x>
                         <y>540</y>
                         <z>0</z>
-                        <width>7860</width>
+                        <width>5860</width>
                         <height>539.5</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -63,7 +63,30 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="PortalVertical" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>5366</x>
+                        <y>-709</y>
+                        <z>0</z>
+                        <width>774</width>
+                        <height>802</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>-0.880596995</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Front" sid="8722530541249526">
@@ -92,6 +115,7 @@
                         <newX>0</newX>
                         <newY>0</newY>
                         <moveDir></moveDir>
+                        <MovementEnabled>true</MovementEnabled>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">

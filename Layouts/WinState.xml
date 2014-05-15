@@ -2,7 +2,7 @@
 <c2layout>
     <name>WinState</name>
     <sid>3141043524004265</sid>
-    <event-sheet>01_Scene1</event-sheet>
+    <event-sheet>WinState_Events</event-sheet>
     <size>
         <width>854</width>
         <height>480</height>

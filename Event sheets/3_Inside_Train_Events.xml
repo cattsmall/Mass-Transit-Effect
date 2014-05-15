@@ -4,15 +4,107 @@
     <name>3_Inside_Train_Events</name>
     <events>
         <include>000_Main_Controls</include>
-        <event-block sid="2619394790127683">
+        <event-block sid="3734075263441677">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="9314878173693373" type="Player">
-                    <param id="0" name="Object">Portals</param>
+                <condition id="-2" name="On start of layout" sid="4283598789103113" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="4979054596807835" type="Player">
+                    <param id="0" name="Instance variable">MovementEnabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="4769949223644378" type="Player">
+                    <param id="0" name="Instance variable">newY</param>
+                    <param id="1" name="Value">1079</param>
+                </action>
+                <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="5748594156294221" type="Player">
+                    <param id="0" name="Acceleration">90</param>
+                    <param id="1" name="X">Player.X</param>
+                    <param id="2" name="Y">Player.newY</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="5483403146008216" type="Player">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">Player.Speed </param>
+                </action>
+                <action id="-26" name="Move to layer" sid="755788536472638" type="Player">
+                    <param id="0" name="Layer">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="4196196085163835" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="CustomMovement" id="0" name="Stop" sid="661869399837979" type="Player" />
+                <action id="-16" name="Wait" sid="1972209770073857" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="7025581113612164" type="Player">
+                    <param id="0" name="Instance variable">MovementEnabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>End of Level</comment>
+        <event-block sid="9558076102762209">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8573114313043604" type="Player">
+                    <param id="0" name="Object">PortalVertical</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="6588933638600934" type="Player">
+                    <param id="0" name="Instance variable">MovementEnabled</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="8378723484496806" type="System">
-                    <param id="0" name="Layout">2_Platform_Entrance</param>
+                <action id="-13" name="Set boolean" sid="482465743349173" type="Player">
+                    <param id="0" name="Instance variable">MovementEnabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9373553087807621" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-10" name="Set value" sid="8257025307259497" type="Player">
+                    <param id="0" name="Instance variable">newX</param>
+                    <param id="1" name="Value">Player.X + (Player.Speed/4)</param>
+                </action>
+                <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="1695866533601502" type="Player">
+                    <param id="0" name="Acceleration">90</param>
+                    <param id="1" name="X">Player.newX</param>
+                    <param id="2" name="Y">Player.Y</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="3955686457983069" type="Player">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">Player.Speed</param>
+                </action>
+                <action id="-16" name="Wait" sid="2057300230253772" type="System">
+                    <param id="0" name="Seconds">0.252</param>
+                </action>
+                <action behavior="CustomMovement" id="0" name="Stop" sid="4104934834580747" type="Player" />
+                <action id="-16" name="Wait" sid="7325490526121433" type="System">
+                    <param id="0" name="Seconds">0.252</param>
+                </action>
+                <action id="-10" name="Set value" sid="3449643346637812" type="Player">
+                    <param id="0" name="Instance variable">newY</param>
+                    <param id="1" name="Value">0-Player.Height</param>
+                </action>
+                <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="4196865413451502" type="Player">
+                    <param id="0" name="Acceleration">90</param>
+                    <param id="1" name="X">Player.X</param>
+                    <param id="2" name="Y">Player.newY</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="5819503532278996" type="Player">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">Player.Speed</param>
+                </action>
+                <action id="-16" name="Wait" sid="6272864860393599" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="4459765106589535" type="Player">
+                    <param id="0" name="Layer">2</param>
+                </action>
+                <action behavior="CustomMovement" id="0" name="Stop" sid="9510257707096738" type="Player" />
+                <action id="-16" name="Wait" sid="9607892004151255" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="691733524884475" type="System">
+                    <param id="0" name="Layout">3_Inside_Train</param>
                 </action>
             </actions>
         </event-block>

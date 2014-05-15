@@ -99,6 +99,7 @@
                         <Speed>1079</Speed>
                         <isCollidedWith>false</isCollidedWith>
                         <angerLevel>0</angerLevel>
+                        <isFronting></isFronting>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -141,6 +142,7 @@
                         <newX>0</newX>
                         <newY>0</newY>
                         <moveDir></moveDir>
+                        <MovementEnabled>true</MovementEnabled>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -225,6 +227,7 @@
                         <Speed>1079</Speed>
                         <isCollidedWith>false</isCollidedWith>
                         <angerLevel>0</angerLevel>
+                        <isFronting></isFronting>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">

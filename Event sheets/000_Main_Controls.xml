@@ -4,459 +4,487 @@
     <name>000_Main_Controls</name>
     <events>
         <comment>Keyboard inputs</comment>
-        <event-block any="1" sid="2764681892710151">
-            <conditions>
-                <condition id="2" name="Key is down" sid="4454630814704299" type="Keyboard">
-                    <param id="0" name="Key">38 (Up arrow)</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="2345525126249927" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
-                </condition>
-            </conditions>
-            <actions />
+        <event-group description="" sid="5946328671977469" title="Player Movement">
             <sub-events>
-                <event-block sid="2350251040422105">
+                <event-block sid="1717715007861003">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="1729687751424001" type="Player">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">809.25</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3886536459716898" type="Player">
+                            <param id="0" name="Instance variable">MovementEnabled</param>
                         </condition>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="9846159114607317" type="Player" />
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="7007565400120779" type="Player">
-                            <param id="0" name="Instance variable">newY</param>
-                            <param id="1" name="Value">Player.Y - (Player.Speed/4)</param>
-                        </action>
-                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="3794183066975026" type="Player">
-                            <param id="0" name="Acceleration">90</param>
-                            <param id="1" name="X">Player.X</param>
-                            <param id="2" name="Y">Player.newY</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="8275746147280811" type="Player">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">Player.Speed</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="1241789686196234" type="System">
-                            <param id="0" name="Seconds">0.252</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="6570475052419425" type="Player">
-                            <param id="0" name="Layer">1</param>
-                        </action>
-                        <action behavior="CustomMovement" id="0" name="Stop" sid="6819018290229207" type="Player" />
-                        <action id="-2" name="Set Y" sid="2965880315747282" type="Player">
-                            <param id="0" name="Y">809.25</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="6905114760012735" type="Player">
-                            <param id="0" name="Instance variable">newY</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <comment>Up</comment>
+                        <event-block any="1" sid="2764681892710151">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="4454630814704299" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="2345525126249927" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2350251040422105">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="1729687751424001" type="Player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="Y co-ordinate">809.25</param>
+                                        </condition>
+                                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="9846159114607317" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7007565400120779" type="Player">
+                                            <param id="0" name="Instance variable">newY</param>
+                                            <param id="1" name="Value">Player.Y - (Player.Speed/4)</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="3794183066975026" type="Player">
+                                            <param id="0" name="Acceleration">90</param>
+                                            <param id="1" name="X">Player.X</param>
+                                            <param id="2" name="Y">Player.newY</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="2" name="Set speed" sid="8275746147280811" type="Player">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">Player.Speed</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="1241789686196234" type="System">
+                                            <param id="0" name="Seconds">0.252</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="6570475052419425" type="Player">
+                                            <param id="0" name="Layer">1</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="0" name="Stop" sid="6819018290229207" type="Player" />
+                                        <action id="-2" name="Set Y" sid="2965880315747282" type="Player">
+                                            <param id="0" name="Y">809.25</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6905114760012735" type="Player">
+                                            <param id="0" name="Instance variable">newY</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Down</comment>
+                        <event-block any="1" sid="516519831670806">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="196730180114193" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="8454358117460581" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1442527055611598">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="6553134550941423" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">1079</param>
+                                        </condition>
+                                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="3417757909619133" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2790378377464407" type="Player">
+                                            <param id="0" name="Instance variable">newY</param>
+                                            <param id="1" name="Value">Player.Y + (Player.Speed/4)</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="5936335696652874" type="Player">
+                                            <param id="0" name="Acceleration">90</param>
+                                            <param id="1" name="X">Player.X</param>
+                                            <param id="2" name="Y">Player.newY</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="2" name="Set speed" sid="1373789938440771" type="Player">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">Player.Speed </param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="2819799567655432" type="System">
+                                            <param id="0" name="Seconds">0.252</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="7877981686996739" type="Player">
+                                            <param id="0" name="Layer">2</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="0" name="Stop" sid="1491596509859952" type="Player" />
+                                        <action id="-2" name="Set Y" sid="8024416692934165" type="Player">
+                                            <param id="0" name="Y">1079</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="2009109728184083" type="Player">
+                                            <param id="0" name="Instance variable">newY</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Left</comment>
+                        <event-block any="1" sid="2051172360868955">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="7848480404584445" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="3859915537026201" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="627882822026528">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="1955441252813429" type="Player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">150</param>
+                                        </condition>
+                                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="5172042108058403" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="7474295844475878" type="Player">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4999555559271004" type="Player">
+                                            <param id="0" name="Instance variable">moveDir</param>
+                                            <param id="1" name="Value">&quot;left&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9685835969745452" type="Player">
+                                            <param id="0" name="Instance variable">newX</param>
+                                            <param id="1" name="Value">Player.X - (Player.Speed/4)</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="4221480873468401" type="Player">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="2" name="Set speed" sid="6874888417342311" type="Player">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">Player.Speed</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="4407775303421864" type="System">
+                                            <param id="0" name="Seconds">0.252</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="0" name="Stop" sid="9058445699560025" type="Player" />
+                                        <action id="-1" name="Set X" sid="6169510654711341" type="Player">
+                                            <param id="0" name="X">Player.newX</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="7392798493037762" type="Player">
+                                            <param id="0" name="Instance variable">newX</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Push NPCs</comment>
+                                <event-block sid="2976801777962942">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="8306325799016027" type="Player">
+                                            <param id="0" name="Object">NPCs</param>
+                                        </condition>
+                                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="9408599459641654" type="NPCs" />
+                                        <condition id="-2" name="Compare Y" sid="7816197176032749" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Y co-ordinate">NPCs.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="1674974310440815" type="NPCs">
+                                            <param id="0" name="Instance variable">isCollidedWith</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9187528881883181" type="NPCs">
+                                            <param id="0" name="Instance variable">newX</param>
+                                            <param id="1" name="Value">NPCs.X - (NPCs.Speed/2)</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="8662858258839507" type="NPCs">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="2" name="Set speed" sid="9073884262685757" type="NPCs">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">NPCs.Speed*2</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="6402936376307577" type="System">
+                                            <param id="0" name="Seconds">0.252</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="0" name="Stop" sid="2059725743918573" type="NPCs" />
+                                        <action id="-1" name="Set X" sid="2398414840131574" type="NPCs">
+                                            <param id="0" name="X">NPCs.newX</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="8637257471331913" type="NPCs">
+                                            <param id="0" name="Instance variable">isCollidedWith</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Right</comment>
+                        <event-block any="1" sid="547186962371471">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="640186872136513" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="2" name="Key is down" sid="5793683559808666" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7137911484205457">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="2255432461333773" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">LayoutWidth - Player.Width</param>
+                                        </condition>
+                                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="6195902467609425" type="Player" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="7675507712059859" type="Player">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="5203901432562126" type="Player">
+                                            <param id="0" name="Instance variable">moveDir</param>
+                                            <param id="1" name="Value">&quot;right&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1344277196159466" type="Player">
+                                            <param id="0" name="Instance variable">newX</param>
+                                            <param id="1" name="Value">Player.X + (Player.Speed/4)</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="4825833512050945" type="Player">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="2" name="Set speed" sid="5479407457874584" type="Player">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">Player.Speed</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="9242754603670386" type="System">
+                                            <param id="0" name="Seconds">0.252</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="0" name="Stop" sid="1474973075642076" type="Player" />
+                                        <action id="-1" name="Set X" sid="9731063260916195" type="Player">
+                                            <param id="0" name="X">Player.newX</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="3901072411096166" type="Player">
+                                            <param id="0" name="Instance variable">newX</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Push NPCs</comment>
+                                <event-block sid="3286804257594746">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="6083290980826185" type="Player">
+                                            <param id="0" name="Object">NPCs</param>
+                                        </condition>
+                                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="1005144173192088" type="NPCs" />
+                                        <condition id="-2" name="Compare Y" sid="4451293603926617" type="Player">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Y co-ordinate">NPCs.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="510842661503256" type="NPCs">
+                                            <param id="0" name="Instance variable">isCollidedWith</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1133196991585484" type="NPCs">
+                                            <param id="0" name="Instance variable">newX</param>
+                                            <param id="1" name="Value">NPCs.X + (NPCs.Speed/2)</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="1439175158695881" type="NPCs">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="2" name="Set speed" sid="289121762831165" type="NPCs">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">NPCs.Speed *2</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="4921764183507959" type="System">
+                                            <param id="0" name="Seconds">0.252</param>
+                                        </action>
+                                        <action behavior="CustomMovement" id="0" name="Stop" sid="1654776066965029" type="NPCs" />
+                                        <action id="-1" name="Set X" sid="7935078149475656" type="NPCs">
+                                            <param id="0" name="X">NPCs.newX</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="7864496088740989" type="NPCs">
+                                            <param id="0" name="Instance variable">isCollidedWith</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block any="1" sid="516519831670806">
-            <conditions>
-                <condition id="2" name="Key is down" sid="196730180114193" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="8454358117460581" type="Keyboard">
-                    <param id="0" name="Key">83 (S)</param>
-                </condition>
-            </conditions>
-            <actions />
+        </event-group>
+        <event-group description="" sid="44406525626621" title="NPC Controls">
             <sub-events>
-                <event-block sid="1442527055611598">
+                <comment>Spawn direction - left</comment>
+                <event-block sid="4013801275321763">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="6553134550941423" type="Player">
+                        <condition id="-6" name="Every X seconds" sid="3361868619793156" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="501736550205395" type="NPCLeft">
+                            <param id="0" name="Instance variable">isCollidedWith</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4704930362828703" type="NPCLeft">
+                            <param id="0" name="Instance variable">newX</param>
+                            <param id="1" name="Value">NPCLeft.X - (NPCLeft.Speed/4)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="9284403820404048">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="5606820046343961" type="NPCLeft">
+                                    <param id="0" name="Instance variable">newX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Player.X</param>
+                                </condition>
+                                <condition id="-2" inverted="1" name="Compare Y" sid="4156164613153067" type="NPCLeft">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="4804802127227658" type="NPCLeft">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" sid="3128264397441924" type="NPCLeft">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">NPCLeft.Speed</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="509673267943178" type="System">
+                                    <param id="0" name="Seconds">0.252</param>
+                                </action>
+                                <action behavior="CustomMovement" id="0" name="Stop" sid="2235376698807611" type="NPCLeft" />
+                                <action id="-1" name="Set X" sid="876543834149806" type="NPCLeft">
+                                    <param id="0" name="X">NPCLeft.newX</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Spawn direction - right</comment>
+                <event-block sid="386363643468425">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="6411075183471333" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6938375164829357" type="NPCRight">
+                            <param id="0" name="Instance variable">isCollidedWith</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3866845758959392" type="NPCRight">
+                            <param id="0" name="Instance variable">newX</param>
+                            <param id="1" name="Value">NPCRight.X + (NPCRight.Speed/4)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="4468581685103501">
+                            <conditions>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="7711722693148972" type="NPCRight">
+                                    <param id="0" name="Instance variable">newX</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Player.X</param>
+                                </condition>
+                                <condition id="-2" inverted="1" name="Compare Y" sid="7980845676329039" type="NPCRight">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">Player.Y</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="7444084790550742" type="NPCRight">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" sid="2978220653520784" type="NPCRight">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">NPCRight.Speed</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6799945914393186" type="System">
+                                    <param id="0" name="Seconds">0.252</param>
+                                </action>
+                                <action behavior="CustomMovement" id="0" name="Stop" sid="9324779157583112" type="NPCRight" />
+                                <action id="-1" name="Set X" sid="4318906976821771" type="NPCRight">
+                                    <param id="0" name="X">NPCRight.newX</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1255895930435224">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="5389680427985998" type="NPCs">
                             <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">1079</param>
-                        </condition>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="3417757909619133" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="2790378377464407" type="Player">
-                            <param id="0" name="Instance variable">newY</param>
-                            <param id="1" name="Value">Player.Y + (Player.Speed/4)</param>
-                        </action>
-                        <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="5936335696652874" type="Player">
-                            <param id="0" name="Acceleration">90</param>
-                            <param id="1" name="X">Player.X</param>
-                            <param id="2" name="Y">Player.newY</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="1373789938440771" type="Player">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">Player.Speed </param>
-                        </action>
-                        <action id="-16" name="Wait" sid="2819799567655432" type="System">
-                            <param id="0" name="Seconds">0.252</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="7877981686996739" type="Player">
-                            <param id="0" name="Layer">2</param>
-                        </action>
-                        <action behavior="CustomMovement" id="0" name="Stop" sid="1491596509859952" type="Player" />
-                        <action id="-2" name="Set Y" sid="8024416692934165" type="Player">
-                            <param id="0" name="Y">1079</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2009109728184083" type="Player">
-                            <param id="0" name="Instance variable">newY</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block any="1" sid="2051172360868955">
-            <conditions>
-                <condition id="2" name="Key is down" sid="7848480404584445" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="3859915537026201" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="627882822026528">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="1955441252813429" type="Player">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">150</param>
-                        </condition>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="5172042108058403" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="7474295844475878" type="Player">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4999555559271004" type="Player">
-                            <param id="0" name="Instance variable">moveDir</param>
-                            <param id="1" name="Value">&quot;left&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="9685835969745452" type="Player">
-                            <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Value">Player.X - (Player.Speed/4)</param>
-                        </action>
-                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="4221480873468401" type="Player">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="6874888417342311" type="Player">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">Player.Speed</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="4407775303421864" type="System">
-                            <param id="0" name="Seconds">0.252</param>
-                        </action>
-                        <action behavior="CustomMovement" id="0" name="Stop" sid="9058445699560025" type="Player" />
-                        <action id="-1" name="Set X" sid="6169510654711341" type="Player">
-                            <param id="0" name="X">Player.newX</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="7392798493037762" type="Player">
-                            <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2976801777962942">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="8306325799016027" type="Player">
-                            <param id="0" name="Object">NPCs</param>
-                        </condition>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="9408599459641654" type="NPCs" />
-                        <condition id="-2" name="Compare Y" sid="7816197176032749" type="Player">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">NPCs.Y</param>
+                            <param id="1" name="X co-ordinate">-NPCs.Width/2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="1674974310440815" type="NPCs">
-                            <param id="0" name="Instance variable">isCollidedWith</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="9187528881883181" type="NPCs">
-                            <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Value">NPCs.X - (NPCs.Speed/2)</param>
-                        </action>
-                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="8662858258839507" type="NPCs">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="9073884262685757" type="NPCs">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">NPCs.Speed*2</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="6402936376307577" type="System">
-                            <param id="0" name="Seconds">0.252</param>
-                        </action>
-                        <action behavior="CustomMovement" id="0" name="Stop" sid="2059725743918573" type="NPCs" />
-                        <action id="-1" name="Set X" sid="2398414840131574" type="NPCs">
-                            <param id="0" name="X">NPCs.newX</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="8637257471331913" type="NPCs">
-                            <param id="0" name="Instance variable">isCollidedWith</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
+                        <action id="-9" name="Destroy" sid="8273892821479331" type="NPCs" />
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block any="1" sid="547186962371471">
-            <conditions>
-                <condition id="2" name="Key is down" sid="640186872136513" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="5793683559808666" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="7137911484205457">
+                <comment>Set Random anger level</comment>
+                <event-block sid="5167265529032608">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="2255432461333773" type="Player">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">LayoutWidth - Player.Width</param>
-                        </condition>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="6195902467609425" type="Player" />
+                        <condition id="-18" name="On created" sid="9407849035913932" type="NPCs" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="7675507712059859" type="Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="5203901432562126" type="Player">
-                            <param id="0" name="Instance variable">moveDir</param>
-                            <param id="1" name="Value">&quot;right&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="1344277196159466" type="Player">
-                            <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Value">Player.X + (Player.Speed/4)</param>
-                        </action>
-                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="4825833512050945" type="Player">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="5479407457874584" type="Player">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">Player.Speed</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="9242754603670386" type="System">
-                            <param id="0" name="Seconds">0.252</param>
-                        </action>
-                        <action behavior="CustomMovement" id="0" name="Stop" sid="1474973075642076" type="Player" />
-                        <action id="-1" name="Set X" sid="9731063260916195" type="Player">
-                            <param id="0" name="X">Player.newX</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3901072411096166" type="Player">
-                            <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3286804257594746">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="6083290980826185" type="Player">
-                            <param id="0" name="Object">NPCs</param>
-                        </condition>
-                        <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="1005144173192088" type="NPCs" />
-                        <condition id="-2" name="Compare Y" sid="4451293603926617" type="Player">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">NPCs.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="510842661503256" type="NPCs">
-                            <param id="0" name="Instance variable">isCollidedWith</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="1133196991585484" type="NPCs">
-                            <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Value">NPCs.X + (NPCs.Speed/2)</param>
-                        </action>
-                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="1439175158695881" type="NPCs">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="289121762831165" type="NPCs">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">NPCs.Speed *2</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="4921764183507959" type="System">
-                            <param id="0" name="Seconds">0.252</param>
-                        </action>
-                        <action behavior="CustomMovement" id="0" name="Stop" sid="1654776066965029" type="NPCs" />
-                        <action id="-1" name="Set X" sid="7935078149475656" type="NPCs">
-                            <param id="0" name="X">NPCs.newX</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="7864496088740989" type="NPCs">
-                            <param id="0" name="Instance variable">isCollidedWith</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="6957361762745906">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="472802061048609" type="Player">
-                    <param id="0" name="Object">Portals</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <comment>NPC Controls</comment>
-        <event-block sid="4013801275321763">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="3361868619793156" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="501736550205395" type="NPCLeft">
-                    <param id="0" name="Instance variable">isCollidedWith</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="4704930362828703" type="NPCLeft">
-                    <param id="0" name="Instance variable">newX</param>
-                    <param id="1" name="Value">NPCLeft.X - (NPCLeft.Speed/4)</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block any="1" sid="9284403820404048">
-                    <conditions>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="5606820046343961" type="NPCLeft">
-                            <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Player.X</param>
-                        </condition>
-                        <condition id="-2" inverted="1" name="Compare Y" sid="4156164613153067" type="NPCLeft">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">Player.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="4804802127227658" type="NPCLeft">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="3128264397441924" type="NPCLeft">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">NPCLeft.Speed</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="509673267943178" type="System">
-                            <param id="0" name="Seconds">0.252</param>
-                        </action>
-                        <action behavior="CustomMovement" id="0" name="Stop" sid="2235376698807611" type="NPCLeft" />
-                        <action id="-1" name="Set X" sid="876543834149806" type="NPCLeft">
-                            <param id="0" name="X">NPCLeft.newX</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="386363643468425">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="6411075183471333" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6938375164829357" type="NPCRight">
-                    <param id="0" name="Instance variable">isCollidedWith</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="3866845758959392" type="NPCRight">
-                    <param id="0" name="Instance variable">newX</param>
-                    <param id="1" name="Value">NPCRight.X + (NPCRight.Speed/4)</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block any="1" sid="4468581685103501">
-                    <conditions>
-                        <condition id="-7" inverted="1" name="Compare instance variable" sid="7711722693148972" type="NPCRight">
-                            <param id="0" name="Instance variable">newX</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Player.X</param>
-                        </condition>
-                        <condition id="-2" inverted="1" name="Compare Y" sid="7980845676329039" type="NPCRight">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">Player.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="7444084790550742" type="NPCRight">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="2978220653520784" type="NPCRight">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">NPCRight.Speed</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="6799945914393186" type="System">
-                            <param id="0" name="Seconds">0.252</param>
-                        </action>
-                        <action behavior="CustomMovement" id="0" name="Stop" sid="9324779157583112" type="NPCRight" />
-                        <action id="-1" name="Set X" sid="4318906976821771" type="NPCRight">
-                            <param id="0" name="X">NPCRight.newX</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="1255895930435224">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="5389680427985998" type="NPCs">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">-NPCs.Width/2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="8273892821479331" type="NPCs" />
-            </actions>
-        </event-block>
-        <event-block sid="2373371793501656">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="6298258028074847" type="NPCs">
-                    <param id="0" name="Instance variable">isCollidedWith</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="375500416306955">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9433684644057774" type="NPCs">
+                        <action id="-10" name="Set value" sid="2540298247324021" type="NPCs">
                             <param id="0" name="Instance variable">angerLevel</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="7601106539615699" type="NPCs">
-                            <param id="0" name="Instance variable">angerLevel</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="1" name="Value">random(0,4)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8647228237195616" type="NPCs">
+                            <param id="0" name="Instance variable">isFronting</param>
+                            <param id="1" name="Value">choose(&quot;true&quot;,&quot;false&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7855333810018896">
+                <comment>NPC Collision</comment>
+                <event-block sid="2373371793501656">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6559863376415385" type="NPCs">
-                            <param id="0" name="Instance variable">angerLevel</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">2</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6298258028074847" type="NPCs">
+                            <param id="0" name="Instance variable">isCollidedWith</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4629653535203897" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="1560724242712591" type="NPCs">
-                            <param id="0" name="Animation">&quot;Angry&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="375500416306955">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9433684644057774" type="NPCs">
+                                    <param id="0" name="Instance variable">angerLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="7601106539615699" type="NPCs">
+                                    <param id="0" name="Instance variable">angerLevel</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7855333810018896">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6559863376415385" type="NPCs">
+                                    <param id="0" name="Instance variable">angerLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1560724242712591" type="NPCs">
+                                    <param id="0" name="Animation">&quot;Angry&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <comment>Set Random anger level</comment>
-        <event-block sid="5167265529032608">
-            <conditions>
-                <condition id="-18" name="On created" sid="9407849035913932" type="NPCs" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="2540298247324021" type="NPCs">
-                    <param id="0" name="Instance variable">angerLevel</param>
-                    <param id="1" name="Value">floor(random(0,3))</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="5068381712190282" title="Encounter system">
+            <sub-events>
+                <comment>Encounter system</comment>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

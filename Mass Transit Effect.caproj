@@ -51,6 +51,7 @@
                 <instance-variable name="newX" sid="4424080911186574" type="number" />
                 <instance-variable name="newY" sid="2730787819121599" type="number" />
                 <instance-variable name="moveDir" sid="8324489302783168" type="string" />
+                <instance-variable name="MovementEnabled" sid="5502449517036903" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="ScrollTo" sid="367017543846175">
@@ -117,17 +118,49 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PortalVertical" sid="928917707601805">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3443949929783145" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.880597">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledFloorTrain" sid="7109651662145079">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="NPCStill" sid="6512417914002598">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3271336218076134" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="Angry" pingpong="0" repeatcount="1" repeatto="0" sid="9914996309061372" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Portals" plugin-id="Sprite" sid="6352106301310882">
             <members>
                 <member>PortalHorizontal</member>
+                <member>PortalVertical</member>
             </members>
         </family>
         <family name="NPCs" plugin-id="Sprite" sid="4416272643633587">
             <members>
                 <member>NPCLeft</member>
                 <member>NPCRight</member>
+                <member>NPCStill</member>
             </members>
             <instance-variables>
                 <instance-variable name="newX" sid="8806881257634505" type="number" />
@@ -137,6 +170,7 @@
                 <instance-variable name="Speed" sid="5394312360595931" type="number" />
                 <instance-variable name="isCollidedWith" sid="9949003347727155" type="boolean" />
                 <instance-variable name="angerLevel" sid="8042045202927863" type="number" />
+                <instance-variable name="isFronting" sid="6737542138151629" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="3774302205323852">
@@ -158,8 +192,8 @@
         <layout>2_Platform_Entrance.xml</layout>
         <layout>3_Inside_Train.xml</layout>
         <layout>4_Platform_Exit.xml</layout>
-        <layout>WinState.xml</layout>
         <layout>LoseState.xml</layout>
+        <layout>WinState.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>000_Main_Controls.xml</event-sheet>
@@ -169,6 +203,8 @@
         <event-sheet>2_Platform_Entrance_Events.xml</event-sheet>
         <event-sheet>3_Inside_Train_Events.xml</event-sheet>
         <event-sheet>4_Platform_Exit_Events.xml</event-sheet>
+        <event-sheet>WinState_Events.xml</event-sheet>
+        <event-sheet>LoseState_Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
