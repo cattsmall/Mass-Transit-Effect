@@ -15,11 +15,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>00_Title Screen</layout>
         <layout>01_Scene1</layout>
         <layout>4_Platform_Exit</layout>
-        <layout active="1">3_Inside_Train</layout>
+        <layout>3_Inside_Train</layout>
         <layout>04_Scene4</layout>
         <layout>WinState</layout>
         <layout>LoseState</layout>
-        <event-sheet>000_Main_Controls</event-sheet>
+        <layout>02_Scene2</layout>
+        <layout>03_Scene3</layout>
+        <event-sheet active="1">000_Main_Controls</event-sheet>
         <event-sheet>00_Title_Screen_Events</event-sheet>
         <event-sheet>1_Subway_Entrance_Events</event-sheet>
         <event-sheet>2_Platform_Entrance_Events</event-sheet>
@@ -37,6 +39,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="1" name="Portals" />
-        <family expanded="0" name="NPCs" />
+        <family expanded="1" name="NPCs" />
     </families-expanded>
 </c2uistate>

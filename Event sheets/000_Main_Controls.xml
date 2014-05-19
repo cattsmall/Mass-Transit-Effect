@@ -30,7 +30,7 @@
                                     <conditions>
                                         <condition id="-2" name="Compare Y" sid="1729687751424001" type="Player">
                                             <param id="0" name="Comparison">4</param>
-                                            <param id="1" name="Y co-ordinate">809.25</param>
+                                            <param id="1" name="Y co-ordinate">810</param>
                                         </condition>
                                         <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="9846159114607317" type="Player" />
                                     </conditions>
@@ -56,7 +56,7 @@
                                         </action>
                                         <action behavior="CustomMovement" id="0" name="Stop" sid="6819018290229207" type="Player" />
                                         <action id="-2" name="Set Y" sid="2965880315747282" type="Player">
-                                            <param id="0" name="Y">809.25</param>
+                                            <param id="0" name="Y">810</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="6905114760012735" type="Player">
                                             <param id="0" name="Instance variable">newY</param>
@@ -82,7 +82,7 @@
                                     <conditions>
                                         <condition id="-2" name="Compare Y" sid="6553134550941423" type="Player">
                                             <param id="0" name="Comparison">2</param>
-                                            <param id="1" name="Y co-ordinate">1079</param>
+                                            <param id="1" name="Y co-ordinate">1080</param>
                                         </condition>
                                         <condition behavior="CustomMovement" id="0" inverted="1" name="Is moving" sid="3417757909619133" type="Player" />
                                     </conditions>
@@ -108,7 +108,7 @@
                                         </action>
                                         <action behavior="CustomMovement" id="0" name="Stop" sid="1491596509859952" type="Player" />
                                         <action id="-2" name="Set Y" sid="8024416692934165" type="Player">
-                                            <param id="0" name="Y">1079</param>
+                                            <param id="0" name="Y">1080</param>
                                         </action>
                                         <action id="-10" name="Set value" sid="2009109728184083" type="Player">
                                             <param id="0" name="Instance variable">newY</param>

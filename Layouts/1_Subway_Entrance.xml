@@ -5,7 +5,7 @@
     <event-sheet>1_Subway_Entrance_Events</event-sheet>
     <size>
         <width>7860</width>
-        <height>1079</height>
+        <height>1080</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -96,7 +96,7 @@
                         <newY>0</newY>
                         <spawnX>0</spawnX>
                         <spawnY>0</spawnY>
-                        <Speed>1079</Speed>
+                        <Speed>1080</Speed>
                         <isCollidedWith>false</isCollidedWith>
                         <angerLevel>0</angerLevel>
                         <isFronting></isFronting>
@@ -118,11 +118,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>136</x>
-                        <y>809.25</y>
+                        <x>135</x>
+                        <y>810</y>
                         <z>0</z>
-                        <width>269.75</width>
-                        <height>539.5</height>
+                        <width>270</width>
+                        <height>540</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -138,7 +138,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Speed>1079</Speed>
+                        <Speed>1080</Speed>
                         <newX>0</newX>
                         <newY>0</newY>
                         <moveDir></moveDir>
@@ -153,7 +153,7 @@
                         <behavior-instance type="CustomMovement">
                             <properties>
                                 <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>269</pixels-per-step>
+                                <pixels-per-step>270</pixels-per-step>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -161,11 +161,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>136</x>
-                        <y>1079</y>
+                        <x>135</x>
+                        <y>1080</y>
                         <z>0</z>
-                        <width>269.75</width>
-                        <height>539.5</height>
+                        <width>270</width>
+                        <height>540</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -224,7 +224,7 @@
                         <newY>0</newY>
                         <spawnX>0</spawnX>
                         <spawnY>0</spawnY>
-                        <Speed>1079</Speed>
+                        <Speed>1080</Speed>
                         <isCollidedWith>false</isCollidedWith>
                         <angerLevel>0</angerLevel>
                         <isFronting></isFronting>
@@ -247,10 +247,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>675.5</x>
-                        <y>1079</y>
+                        <y>1080</y>
                         <z>0</z>
-                        <width>269.75</width>
-                        <height>539.5</height>
+                        <width>270</width>
+                        <height>540</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
