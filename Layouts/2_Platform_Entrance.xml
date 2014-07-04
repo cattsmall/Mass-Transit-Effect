@@ -116,6 +116,7 @@
                         <newY>0</newY>
                         <moveDir></moveDir>
                         <MovementEnabled>true</MovementEnabled>
+                        <isDead>false</isDead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">

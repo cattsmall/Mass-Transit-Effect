@@ -53,6 +53,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="3651155297968282" type="System">
+                    <param id="0" name="Variable">PlayerLocationX</param>
+                    <param id="1" name="Value">135</param>
+                </action>
+                <action id="-9" name="Set value" sid="8620754311532202" type="System">
+                    <param id="0" name="Variable">PlayerLocationY</param>
+                    <param id="1" name="Value">1080</param>
+                </action>
                 <action id="-13" name="Set boolean" sid="482465743349173" type="Player">
                     <param id="0" name="Instance variable">MovementEnabled</param>
                     <param id="1" name="Value">0</param>
@@ -104,7 +112,7 @@
                     <param id="0" name="Seconds">1.0</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="691733524884475" type="System">
-                    <param id="0" name="Layout">3_Inside_Train</param>
+                    <param id="0" name="Layout">4_Platform_Exit</param>
                 </action>
             </actions>
         </event-block>

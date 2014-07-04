@@ -3,6 +3,64 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>000_Main_Controls</name>
     <events>
+        <variable constant="0" name="CurrentLayout" sid="9558197215551687" static="0" type="text"></variable>
+        <variable constant="0" name="PlayerLocationX" sid="7189608001192016" static="0" type="number">135</variable>
+        <variable constant="0" name="PlayerLocationY" sid="4021027117995519" static="0" type="number">1080</variable>
+        <event-group description="" sid="5068381712190282" title="Encounter system">
+            <sub-events>
+                <comment>Encounter system</comment>
+                <event-block sid="9021777632234535">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8608292280480892" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3741516831388443" type="System">
+                            <param id="0" name="Variable">CurrentLayout</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="8986060230689788" type="SceneFadeOut">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="3727290982884781" type="SceneFadeOut">
+                            <param id="0" name="Width">LayoutWidth</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="6005403173960721" type="SceneFadeOut">
+                            <param id="0" name="Height">LayoutHeight</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="1051532601664118" type="SceneFadeOut">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="6383359991763158" type="SceneFadeOut" />
+                        <action id="-3" name="Set position" sid="2165951062942808" type="Player">
+                            <param id="0" name="X">PlayerLocationX</param>
+                            <param id="1" name="Y">PlayerLocationY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7795676278653436">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="9979566916572543" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="4593457537168498" type="SceneFadeIn">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="6969719743980224" type="SceneFadeIn">
+                            <param id="0" name="Width">LayoutWidth</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="3845292574247913" type="SceneFadeIn">
+                            <param id="0" name="Height">LayoutHeight</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8829738112020468" type="SceneFadeIn">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="3286465619114405" type="SceneFadeIn" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <comment>Keyboard inputs</comment>
         <event-group description="" sid="5946328671977469" title="Player Movement">
             <sub-events>
@@ -475,15 +533,41 @@
                                     <param id="0" name="Animation">&quot;Angry&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="6564790921006974" type="System">
+                                    <param id="0" name="Variable">PlayerLocationX</param>
+                                    <param id="1" name="Value">Player.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6926877272925755" type="System">
+                                    <param id="0" name="Variable">PlayerLocationY</param>
+                                    <param id="1" name="Value">Player.Y</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="879364423621876" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1916515416534882" type="SceneFadeIn">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="8668453214476241" type="SceneFadeIn">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="2179261722587848" type="SceneFadeIn">
+                                    <param id="0" name="Height">LayoutHeight</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="8699350778200831" type="SceneFadeIn">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="4162162809081906" type="SceneFadeIn" />
+                                <action id="-16" name="Wait" sid="664659228259328" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="3293451988452108" type="System">
+                                    <param id="0" name="Layout">5_Encounter</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="5068381712190282" title="Encounter system">
-            <sub-events>
-                <comment>Encounter system</comment>
             </sub-events>
         </event-group>
     </events>

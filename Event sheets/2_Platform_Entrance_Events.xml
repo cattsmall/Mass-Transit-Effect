@@ -23,6 +23,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="918903369588665" type="System">
+                    <param id="0" name="Variable">PlayerLocationX</param>
+                    <param id="1" name="Value">135</param>
+                </action>
+                <action id="-9" name="Set value" sid="8783979493026382" type="System">
+                    <param id="0" name="Variable">PlayerLocationY</param>
+                    <param id="1" name="Value">1080</param>
+                </action>
                 <action id="-13" name="Set boolean" sid="3962246785163757" type="Player">
                     <param id="0" name="Instance variable">MovementEnabled</param>
                     <param id="1" name="Value">0</param>

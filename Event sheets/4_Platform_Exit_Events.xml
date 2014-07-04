@@ -11,6 +11,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="7760843378226547" type="System">
+                    <param id="0" name="Variable">PlayerLocationX</param>
+                    <param id="1" name="Value">135</param>
+                </action>
+                <action id="-9" name="Set value" sid="5066252106074354" type="System">
+                    <param id="0" name="Variable">PlayerLocationY</param>
+                    <param id="1" name="Value">1080</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="2386544951389387" type="System">
                     <param id="0" name="Layout">2_Platform_Entrance</param>
                 </action>

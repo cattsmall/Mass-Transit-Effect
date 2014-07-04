@@ -8,14 +8,16 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>2m2oqhlgof90t</unique-id>
-    <saved-with-version>16800</saved-with-version>
+    <saved-with-version>17300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -52,6 +54,7 @@
                 <instance-variable name="newY" sid="2730787819121599" type="number" />
                 <instance-variable name="moveDir" sid="8324489302783168" type="string" />
                 <instance-variable name="MovementEnabled" sid="5502449517036903" type="boolean" />
+                <instance-variable name="isDead" sid="6203200546820801" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="ScrollTo" sid="367017543846175">
@@ -148,6 +151,51 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="9patch" sid="9119066983008823">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="Text_Encounter_Title" sid="3757312052785015">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="NPCText1" sid="5095130523825664" type="string" />
+                <instance-variable name="NPCText2" sid="1707369726134612" type="string" />
+                <instance-variable name="NPCText3" sid="5099855773945247" type="string" />
+                <instance-variable name="NPCText4" sid="642398201598658" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Encounter_Buttons" sid="2804209440228509">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3261775773095409" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_Encounter_Options" sid="1599437249716181">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="OptionType" sid="3741703117324128" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="SceneFadeOut" sid="61060176969948">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Fade" sid="127467135621109">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="SceneFadeIn" sid="7380928171409194">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Fade" sid="3235532690626365">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Portals" plugin-id="Sprite" sid="6352106301310882">
@@ -171,6 +219,7 @@
                 <instance-variable name="isCollidedWith" sid="9949003347727155" type="boolean" />
                 <instance-variable name="angerLevel" sid="8042045202927863" type="number" />
                 <instance-variable name="isFronting" sid="6737542138151629" type="string" />
+                <instance-variable name="moveDir" sid="7640201450699278" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="3774302205323852">
@@ -192,6 +241,7 @@
         <layout>2_Platform_Entrance.xml</layout>
         <layout>3_Inside_Train.xml</layout>
         <layout>4_Platform_Exit.xml</layout>
+        <layout>5_Encounter.xml</layout>
         <layout>LoseState.xml</layout>
         <layout>WinState.xml</layout>
     </layout-folder>
@@ -205,6 +255,7 @@
         <event-sheet>4_Platform_Exit_Events.xml</event-sheet>
         <event-sheet>WinState_Events.xml</event-sheet>
         <event-sheet>LoseState_Events.xml</event-sheet>
+        <event-sheet>5_Encounter_Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />

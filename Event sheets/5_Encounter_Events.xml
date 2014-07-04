@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>5_Encounter_Events</name>
+    <events>
+        <event-block sid="9167454020980084">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4739535882883994" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1814416255717675" type="Player">
+                    <param id="0" name="Instance variable">isDead</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="4017622480831458" type="NPCStill">
+                    <param id="0" name="Animation">&quot;Angry&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set font color" sid="6162429483075344" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(255, 100, 100)</param>
+                </action>
+                <action id="0" name="Set text" sid="2764022200272524" type="Text_Encounter_Title">
+                    <param id="0" name="Text">choose(Text_Encounter_Title.NPCText1, Text_Encounter_Title.NPCText2, Text_Encounter_Title.NPCText3, Text_Encounter_Title.NPCText4)</param>
+                </action>
+                <action id="0" name="Set text" sid="9003366824574033" type="Text_Encounter_Options">
+                    <param id="0" name="Text">Text_Encounter_Options.OptionType</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="9318101036165905" type="SceneFadeOut">
+                    <param id="0" name="Layer">2</param>
+                </action>
+                <action id="-5" name="Set width" sid="4900570882045984" type="SceneFadeOut">
+                    <param id="0" name="Width">LayoutWidth</param>
+                </action>
+                <action id="-6" name="Set height" sid="252725377256966" type="SceneFadeOut">
+                    <param id="0" name="Height">LayoutHeight</param>
+                </action>
+                <action id="-3" name="Set position" sid="7202563105251169" type="SceneFadeOut">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="2165503108222003" type="SceneFadeOut" />
+            </actions>
+        </event-block>
+        <event-block sid="8048707531843178">
+            <conditions>
+                <condition id="-18" name="On created" sid="4016011414982883" type="NPCs" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="3737075473496375" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Value">random(2,4)</param>
+                </action>
+                <action id="-10" name="Set value" sid="4752554627778124" type="NPCs">
+                    <param id="0" name="Instance variable">isFronting</param>
+                    <param id="1" name="Value">choose(&quot;true&quot;,&quot;false&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8034128138453807">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5247040169538435" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1237836119931765" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4253326038326443" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="9346847504297054" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(180, 180, 180)</param>
+                </action>
+                <action id="0" name="Set text" sid="893819028584229" type="Text_Encounter_Title">
+                    <param id="0" name="Text">choose(&quot;&quot;&quot;Excuse me.&quot;&quot;&quot;, &quot;&quot;&quot;I’m sorry.&quot;&quot;&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="6915170596127832" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set font color" sid="6690889812983445" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(255, 100, 100)</param>
+                </action>
+                <action id="0" name="Set text" sid="3907759439590482" type="Text_Encounter_Title">
+                    <param id="0" name="Text">choose(&quot;&quot;&quot;You better watch out.&quot;&quot;&quot;, &quot;&quot;&quot;Don&apos;t try to start something.&quot;&quot;&quot;)</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="8237625752583647" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Value">choose(1,2)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9537295083228572">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9834752511684283" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="66731683466532" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5884214657635271" type="Text_Encounter_Title">
+                            <param id="0" name="Text">Text_Encounter_Title.Text &amp; newline &amp; newline &amp; &quot;What will you do next?&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9271281286542117">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3235501925014402" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2248476003681144" type="NPCStill">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="1729324966181197" type="Text_Encounter_Title">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2662578434503238" type="Text_Encounter_Title">
+                            <param id="0" name="Text">&quot;[THE AGGRESSOR HAS BEEN PLACATED.]&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8148722570286018" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="9934388991467161" type="SceneFadeIn">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="4605093304160367" type="SceneFadeIn">
+                            <param id="0" name="Width">LayoutWidth</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="4635656201268798" type="SceneFadeIn">
+                            <param id="0" name="Height">LayoutHeight</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6407559211924028" type="SceneFadeIn">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="8125219305034343" type="SceneFadeIn" />
+                        <action id="-16" name="Wait" sid="4193758986265703" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="7017124461311487" type="System">
+                            <param id="0" name="Layout">CurrentLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4641917374734323">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4869389239769601" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="7904058100078656" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5794573659985323" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="7814921785026981" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(180, 180, 180)</param>
+                </action>
+                <action id="0" name="Set text" sid="4064892243705111" type="Text_Encounter_Title">
+                    <param id="0" name="Text">choose(&quot;&quot;&quot;Excuse you!&quot;&quot;&quot;, &quot;&quot;&quot;Watch where you’re going!&quot;&quot;&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="5421788590684445" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set font color" sid="7856728593312248" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(255, 100, 100)</param>
+                </action>
+                <action id="0" name="Set text" sid="7456137824302323" type="Text_Encounter_Title">
+                    <param id="0" name="Text">choose(&quot;&quot;&quot;You better check yourself.&quot;&quot;&quot;, &quot;&quot;&quot;Are you trying to start something?&quot;&quot;&quot;)</param>
+                </action>
+                <action id="-11" name="Add to" sid="2387032019592581" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Value">choose(1,2)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4134408399103465">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1792454869014906" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="8434359793808258" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3303361342123827" type="Text_Encounter_Title">
+                            <param id="0" name="Text">Text_Encounter_Title.Text &amp; newline &amp; newline &amp; &quot;What will you do next?&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1587480914676957">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3021544781937003" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1163525073358344">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2896392789845742" type="NPCs">
+                                    <param id="0" name="Instance variable">isFronting</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="3468705100396262" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="7671380996151085" type="NPCStill">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="4760852454957964" type="Text_Encounter_Title">
+                                    <param id="0" name="Color">rgb(255, 255, 255)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4730003040526165" type="Text_Encounter_Title">
+                                    <param id="0" name="Text">&quot;&quot;&quot;...Hey, watch yourself!&quot;&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="9513578858969711" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="3772524181613122" type="Text_Encounter_Title">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9258406367143852" type="Text_Encounter_Title">
+                                    <param id="0" name="Text">&quot;[YOU GET LUCKY AND ESCAPE UNSCATHED.]&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="247379923079873" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="332337698305706" type="SceneFadeIn">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="1084381923540228" type="SceneFadeIn">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="7354441641280637" type="SceneFadeIn">
+                                    <param id="0" name="Height">LayoutHeight</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="6939396531419682" type="SceneFadeIn">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="4050569370673196" type="SceneFadeIn" />
+                                <action id="-16" name="Wait" sid="2194660675293899" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="1494943573024238" type="System">
+                                    <param id="0" name="Layout">CurrentLayout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1774433142205508">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7831978992899583" type="NPCs">
+                                    <param id="0" name="Instance variable">isFronting</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;false&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="7500464178333032" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="1121220787646531" type="Text_Encounter_Title">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2046511647157646" type="Text_Encounter_Title">
+                                    <param id="0" name="Text">&quot;&quot;&quot;I&apos;ll kill you!!&quot;&quot;&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="415554205916743" type="Player">
+                                    <param id="0" name="Instance variable">isDead</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2383709336687983" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6527483971936595" type="Text_Encounter_Title">
+                                    <param id="0" name="Text">&quot;[YOU HAVE BEEN STABBED TO DEATH. GAME OVER.]&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5983152504995854" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="7227966261424347" type="SceneFadeIn">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="2202556890049853" type="SceneFadeIn">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="9156676427841708" type="SceneFadeIn">
+                                    <param id="0" name="Height">LayoutHeight</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="8490230102747899" type="SceneFadeIn">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="6543465630140591" type="SceneFadeIn" />
+                                <action id="-16" name="Wait" sid="3262301800499022" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="6221487902937733" type="System">
+                                    <param id="0" name="Layout">LoseState</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9796908898378028">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2728594744913817" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2830456646450244" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1831009636231538" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="8277611284897057" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(180, 180, 180)</param>
+                </action>
+                <action id="0" name="Set text" sid="8232535886520838" type="Text_Encounter_Title">
+                    <param id="0" name="Text">choose(&quot;[YOU GIVE A WEAK SHOVE.]&quot;, &quot;[YOU GIVE A MIGHTY SHOVE. YOUR HEART RACES.]&quot;)</param>
+                </action>
+                <action id="-16" name="Wait" sid="5451446460580778" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="4" name="Set font color" sid="9184825318255571" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(255, 100, 100)</param>
+                </action>
+                <action id="0" name="Set text" sid="2006624942984631" type="Text_Encounter_Title">
+                    <param id="0" name="Text">choose(&quot;&quot;&quot;Hey!!!!&quot;&quot;&quot;,&quot;&quot;&quot;You better watch yourself!&quot;&quot;&quot;)</param>
+                </action>
+                <action id="-11" name="Add to" sid="4157953264730633" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Value">choose(2,3)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2095748487041317">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5604556757362292" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="3937015189967415" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3601600730475304" type="Text_Encounter_Title">
+                            <param id="0" name="Text">Text_Encounter_Title.Text &amp; newline &amp; newline &amp; &quot;What will you do next?&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8075265124756155">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="26020242929548" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="827518503039398">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8967113382934746" type="NPCs">
+                                    <param id="0" name="Instance variable">isFronting</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;true&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="9155209975602647" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9464700665202493" type="NPCStill">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="525289005450816" type="Text_Encounter_Title">
+                                    <param id="0" name="Color">rgb(255, 255, 255)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4889027792336706" type="Text_Encounter_Title">
+                                    <param id="0" name="Text">&quot;&quot;&quot;What the...?!&quot;&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7220323368848279" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="3254503277089151" type="Text_Encounter_Title">
+                                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9279688805337392" type="Text_Encounter_Title">
+                                    <param id="0" name="Text">&quot;[YOU MANAGE TO SAFELY PUSH THROUGH.]&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7009675160601337" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="6015591866021394" type="SceneFadeIn">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="9932680782646525" type="SceneFadeIn">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="1404443629088818" type="SceneFadeIn">
+                                    <param id="0" name="Height">LayoutHeight</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="3646025676102809" type="SceneFadeIn">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="9067847443531257" type="SceneFadeIn" />
+                                <action id="-16" name="Wait" sid="2772115052507412" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-25" name="Go to layout (by name)" sid="1865615171686227" type="System">
+                                    <param id="0" name="Layout">CurrentLayout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3777229392702878">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8506635214658233" type="NPCs">
+                                    <param id="0" name="Instance variable">isFronting</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;false&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="8747511456288075" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="4066736327475115" type="Text_Encounter_Title">
+                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5227251921870143" type="Text_Encounter_Title">
+                                    <param id="0" name="Text">&quot;&quot;&quot;You’re gonna die!!&quot;&quot;&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="7488081651862202" type="Player">
+                                    <param id="0" name="Instance variable">isDead</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="763856769698824" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9403808231079899" type="Text_Encounter_Title">
+                                    <param id="0" name="Text">&quot;[YOU HAVE BEEN STABBED TO DEATH. GAME OVER.]&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="521113142453548" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="1683390947175713" type="SceneFadeIn">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="2802738760556013" type="SceneFadeIn">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="5803327079494742" type="SceneFadeIn">
+                                    <param id="0" name="Height">LayoutHeight</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="4549106097148853" type="SceneFadeIn">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="1661594069575556" type="SceneFadeIn" />
+                                <action id="-16" name="Wait" sid="8753258606901559" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="2407747570040285" type="System">
+                                    <param id="0" name="Layout">LoseState</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3448878314703385">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8605859837350512" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4855212702045357" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4865642377177383" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="8300760738270342" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Value">choose(0,3)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9033123341494899">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7803115058000859" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="3113840670912141" type="Text_Encounter_Title">
+                            <param id="0" name="Color">rgb(180, 180, 180)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4382264411028161" type="Text_Encounter_Title">
+                            <param id="0" name="Text">&quot;[YOU TRY TO ESCAPE BUT DIDN’T GET AWAY.]&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="885159606680195" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3305730974794534" type="Text_Encounter_Title">
+                            <param id="0" name="Text">Text_Encounter_Title.Text &amp; newline &amp; newline &amp; &quot;What will you do next?&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1287097334232068">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="790189669151676" type="NPCs">
+                            <param id="0" name="Instance variable">angerLevel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9320207268937746" type="Text_Encounter_Title">
+                            <param id="0" name="Color">rgb(180, 180, 180)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9984698694821104" type="Text_Encounter_Title">
+                            <param id="0" name="Text">&quot;[YOU MANAGE TO ESCAPE INTO THE CROWD.]&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3285587075477431" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="374969590534701" type="SceneFadeIn">
+                            <param id="0" name="Layer">2</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="7944467778992758" type="SceneFadeIn">
+                            <param id="0" name="Width">LayoutWidth</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="7424708185489115" type="SceneFadeIn">
+                            <param id="0" name="Height">LayoutHeight</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="3888982949738477" type="SceneFadeIn">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="1484729010501334" type="SceneFadeIn" />
+                        <action id="-16" name="Wait" sid="7450982351554005" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="8453562856660442" type="System">
+                            <param id="0" name="Layout">CurrentLayout</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5930374067956181">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2205919963883677" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="8721945827810801" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(180, 180, 180)</param>
+                </action>
+                <action id="0" name="Set text" sid="7590442423270946" type="Text_Encounter_Title">
+                    <param id="0" name="Text">&quot;[THE AGGRESSOR HAS BEEN PLACATED]&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4806775626468944">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6844614855627952" type="NPCs">
+                    <param id="0" name="Instance variable">angerLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="4073730929383159" type="Text_Encounter_Title">
+                    <param id="0" name="Color">rgb(180, 180, 180)</param>
+                </action>
+                <action id="0" name="Set text" sid="2293436720057671" type="Text_Encounter_Title">
+                    <param id="0" name="Text">&quot;[THE AGGRESSOR HAS BEEN PLACATED]&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

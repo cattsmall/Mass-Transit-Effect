@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>1_Subway_Entrance_Events</name>
     <events>
+        <variable constant="0" name="playerTime" sid="1869174925346695" static="0" type="number">0</variable>
         <include>000_Main_Controls</include>
         <event-block sid="9963854324355296">
             <conditions>
@@ -23,6 +24,14 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="5171973321312082" type="System">
+                    <param id="0" name="Variable">PlayerLocationX</param>
+                    <param id="1" name="Value">135</param>
+                </action>
+                <action id="-9" name="Set value" sid="9881581891429272" type="System">
+                    <param id="0" name="Variable">PlayerLocationY</param>
+                    <param id="1" name="Value">1080</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="8660712660726153" type="System">
                     <param id="0" name="Layout">2_Platform_Entrance</param>
                 </action>

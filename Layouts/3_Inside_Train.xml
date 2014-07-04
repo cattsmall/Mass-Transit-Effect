@@ -124,6 +124,7 @@
                         <isCollidedWith>false</isCollidedWith>
                         <angerLevel>0</angerLevel>
                         <isFronting></isFronting>
+                        <moveDir></moveDir>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -167,6 +168,7 @@
                         <newY>0</newY>
                         <moveDir></moveDir>
                         <MovementEnabled>true</MovementEnabled>
+                        <isDead>false</isDead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -213,6 +215,7 @@
                         <isCollidedWith>false</isCollidedWith>
                         <angerLevel>0</angerLevel>
                         <isFronting></isFronting>
+                        <moveDir></moveDir>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -276,6 +279,7 @@
                         <isCollidedWith>false</isCollidedWith>
                         <angerLevel>0</angerLevel>
                         <isFronting></isFronting>
+                        <moveDir></moveDir>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -322,6 +326,7 @@
                         <isCollidedWith>false</isCollidedWith>
                         <angerLevel>0</angerLevel>
                         <isFronting></isFronting>
+                        <moveDir></moveDir>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
