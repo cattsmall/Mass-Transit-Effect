@@ -21,6 +21,187 @@
                     <param id="0" name="Variable">PlayerAngerLevel</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="2565447649306344" type="System">
+                    <param id="0" name="Variable">GameTimer</param>
+                    <param id="1" name="Value">27000</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Set text for ending responses</comment>
+        <event-block sid="9502582140141277">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6480190207408553" type="System">
+                    <param id="0" name="Variable">EndingState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;good&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9124426586941886">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9771806751741046" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">36000</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5296776076764005" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">39600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8178139860087938" type="Text_Title">
+                            <param id="0" name="Text">&quot;&quot;&quot;If you were any later...&quot;&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9246525906570636">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5506373406466202" type="System">
+                                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="652139040863097" type="Text_Subtitle">
+                                    <param id="0" name="Text">&quot;You have an okay day, despite being late.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2839420394280016">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1644027766829288" type="System">
+                                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5048730492523097" type="Text_Subtitle">
+                                    <param id="0" name="Text">&quot;You feel terrible. Today could&apos;ve had a better start.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5505974101579413">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4836754168840532" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">39600</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9041197724867485" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">43200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="322229074179992" type="Text_Title">
+                            <param id="0" name="Text">&quot;&quot;&quot;Nice of you to show up!&quot;&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="644387742490389">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9790507451100447" type="System">
+                                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2560637135460054" type="Text_Subtitle">
+                                    <param id="0" name="Text">&quot;You feel alright, but know it&apos;ll be a late night.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8811891638196647">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2275652765842173" type="System">
+                                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9229666676769276" type="Text_Subtitle">
+                                    <param id="0" name="Text">&quot;You feel terrible and aren&apos;t looking forward to getting home late.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7623872222659949">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2499171426123508" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">39600</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2481662873881337" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">43200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5817881767046062" type="Text_Title">
+                            <param id="0" name="Text">&quot;&quot;&quot;We&apos;re going to have to let you go.&quot;&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2344000522983308">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7559371512501764" type="System">
+                                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3481959149665255" type="Text_Subtitle">
+                                    <param id="0" name="Text">&quot;Today could&apos;ve been better.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2871045002000898">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7387080449172315" type="System">
+                                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="7586081771320284" type="Text_Subtitle">
+                                    <param id="0" name="Text">&quot;Today is the worst day of your life.&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3509241930636033">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5284169700231177" type="System">
+                    <param id="0" name="Variable">EndingState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;bad&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7667176931231205" type="Text_Title">
+                    <param id="0" name="Text">&quot;You are dead.&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="6188733056950596" type="Text_Subtitle">
+                    <param id="0" name="Text">&quot;You might want to be less aggressive in your next life.&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

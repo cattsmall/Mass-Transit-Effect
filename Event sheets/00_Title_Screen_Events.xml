@@ -5,6 +5,8 @@
     <events>
         <variable constant="0" name="EndingState" sid="377436956285627" static="0" type="text">good</variable>
         <variable constant="0" name="PlayerAngerLevel" sid="123142366376136" static="0" type="number">0</variable>
+        <comment>7:30 AM, 27000 ms</comment>
+        <variable constant="0" name="GameTimer" sid="6579872501644786" static="0" type="number">27000</variable>
         <event-block sid="267160231794786">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4305393388251493" type="Keyboard">

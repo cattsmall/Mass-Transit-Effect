@@ -4,25 +4,53 @@
     <name>4_Platform_Exit_Events</name>
     <events>
         <include>000_Main_Controls</include>
-        <event-block sid="3245402598432568">
+        <comment>End of Level</comment>
+        <event-block sid="7819102942411305">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="3389768644972017" type="Player">
+                <condition id="0" name="On collision with another object" sid="3972624320674322" type="Player">
                     <param id="0" name="Object">Portals</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="7760843378226547" type="System">
+                <action id="-9" name="Set value" sid="4855999923009158" type="System">
                     <param id="0" name="Variable">PlayerLocationX</param>
                     <param id="1" name="Value">135</param>
                 </action>
-                <action id="-9" name="Set value" sid="5066252106074354" type="System">
+                <action id="-9" name="Set value" sid="1264148137674837" type="System">
                     <param id="0" name="Variable">PlayerLocationY</param>
                     <param id="1" name="Value">1080</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="2386544951389387" type="System">
-                    <param id="0" name="Layout">2_Platform_Entrance</param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="2226324022588752">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2914633272878057" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">36000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="1335957170298781" type="System">
+                            <param id="0" name="Layout">WinState</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6355386491428132">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3504030091827398" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">36000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="8834207343094609" type="System">
+                            <param id="0" name="Layout">LoseState</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

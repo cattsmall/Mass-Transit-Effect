@@ -4,44 +4,6 @@
     <name>3_Inside_Train_Events</name>
     <events>
         <include>000_Main_Controls</include>
-        <event-block sid="3734075263441677">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="4283598789103113" type="System" />
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="4979054596807835" type="Player">
-                    <param id="0" name="Instance variable">MovementEnabled</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="4769949223644378" type="Player">
-                    <param id="0" name="Instance variable">newY</param>
-                    <param id="1" name="Value">1079</param>
-                </action>
-                <action behavior="CustomMovement" id="5" name="Accelerate toward position" sid="5748594156294221" type="Player">
-                    <param id="0" name="Acceleration">90</param>
-                    <param id="1" name="X">Player.X</param>
-                    <param id="2" name="Y">Player.newY</param>
-                </action>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="5483403146008216" type="Player">
-                    <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">Player.Speed </param>
-                </action>
-                <action id="-26" name="Move to layer" sid="755788536472638" type="Player">
-                    <param id="0" name="Layer">2</param>
-                </action>
-                <action id="-16" name="Wait" sid="4196196085163835" type="System">
-                    <param id="0" name="Seconds">1</param>
-                </action>
-                <action behavior="CustomMovement" id="0" name="Stop" sid="661869399837979" type="Player" />
-                <action id="-16" name="Wait" sid="1972209770073857" type="System">
-                    <param id="0" name="Seconds">1.0</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="7025581113612164" type="Player">
-                    <param id="0" name="Instance variable">MovementEnabled</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
         <comment>End of Level</comment>
         <event-block sid="9558076102762209">
             <conditions>

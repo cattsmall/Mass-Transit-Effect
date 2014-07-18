@@ -68,6 +68,9 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2282319255261151" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
+                <animation framecount="1" loop="0" name="Angry" pingpong="0" repeatcount="1" repeatto="0" sid="1917826113321873" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="NPCLeft" sid="4453418379633453">
@@ -195,6 +198,12 @@
                 </behavior-type>
             </behaviors>
             <texture />
+        </object-type>
+        <object-type name="Text_Timer" sid="6061104938540713">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text_Subtitle" sid="4953847770513182">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>

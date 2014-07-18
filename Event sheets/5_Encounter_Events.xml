@@ -56,6 +56,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Passive Response</comment>
         <event-block sid="8034128138453807">
             <conditions>
                 <condition id="0" name="On key pressed" sid="5247040169538435" type="Keyboard">
@@ -91,6 +92,10 @@
                 <action id="-12" name="Subtract from" sid="8237625752583647" type="NPCs">
                     <param id="0" name="Instance variable">angerLevel</param>
                     <param id="1" name="Value">choose(1,2)</param>
+                </action>
+                <action id="-10" name="Add to" sid="1378713374284868" type="System">
+                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
             <sub-events>
@@ -157,6 +162,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Aggressive response</comment>
         <event-block sid="4641917374734323">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4869389239769601" type="Keyboard">
@@ -326,6 +332,10 @@
                                 <action id="-16" name="Wait" sid="3262301800499022" type="System">
                                     <param id="0" name="Seconds">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="4246474452624426" type="System">
+                                    <param id="0" name="Variable">EndingState</param>
+                                    <param id="1" name="Value">&quot;bad&quot;</param>
+                                </action>
                                 <action id="-2" name="Go to layout" sid="6221487902937733" type="System">
                                     <param id="0" name="Layout">LoseState</param>
                                 </action>
@@ -335,6 +345,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Shove response</comment>
         <event-block sid="9796908898378028">
             <conditions>
                 <condition id="0" name="On key pressed" sid="2728594744913817" type="Keyboard">
@@ -504,6 +515,10 @@
                                 <action id="-16" name="Wait" sid="8753258606901559" type="System">
                                     <param id="0" name="Seconds">1</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="9068376113191071" type="System">
+                                    <param id="0" name="Variable">EndingState</param>
+                                    <param id="1" name="Value">&quot;bad&quot;</param>
+                                </action>
                                 <action id="-2" name="Go to layout" sid="2407747570040285" type="System">
                                     <param id="0" name="Layout">LoseState</param>
                                 </action>
@@ -513,6 +528,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Run</comment>
         <event-block sid="3448878314703385">
             <conditions>
                 <condition id="0" name="On key pressed" sid="8605859837350512" type="Keyboard">
@@ -533,6 +549,10 @@
                 <action id="-12" name="Subtract from" sid="8300760738270342" type="NPCs">
                     <param id="0" name="Instance variable">angerLevel</param>
                     <param id="1" name="Value">choose(0,3)</param>
+                </action>
+                <action id="-10" name="Add to" sid="2856546655803217" type="System">
+                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
             <sub-events>

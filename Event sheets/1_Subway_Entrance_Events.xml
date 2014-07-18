@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>1_Subway_Entrance_Events</name>
     <events>
-        <variable constant="0" name="playerTime" sid="1869174925346695" static="0" type="number">0</variable>
         <include>000_Main_Controls</include>
         <event-block sid="9963854324355296">
             <conditions>

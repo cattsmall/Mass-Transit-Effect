@@ -37,6 +37,23 @@
                             <param id="1" name="Y">PlayerLocationY</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="9383923016658701">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="141065740844428" type="System">
+                                    <param id="0" name="Variable">PlayerAngerLevel</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4502588388850796" type="Player">
+                                    <param id="0" name="Animation">&quot;Angry&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7795676278653436">
                     <conditions>
@@ -570,5 +587,121 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Game Timer</comment>
+        <event-block sid="8807641503810359">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="643011781470671" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="904238751497169" type="System">
+                    <param id="0" name="Variable">GameTimer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="366066796835738">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8549756333980718" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2378161834396766" type="Text_Timer">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3989454702239784">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4817227620573342" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">35100</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4847934533782061" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">36000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="5760396686992467" type="Text_Timer">
+                            <param id="0" name="Color">rgb(255, 153, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7543676532743197">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8342355851319186" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">36000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3453350072445671" type="Text_Timer">
+                            <param id="0" name="Text">zeropad(int(GameTimer/3600% 60), 2) &amp; &quot;:&quot; &amp; zeropad(int(GameTimer/60%60), 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1134120732873482">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1132998959850217" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">36000</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="8036149623410031" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">39600</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="8492602363516761" type="Text_Timer">
+                            <param id="0" name="Color">rgb(255, 0,0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7538453066136446" type="Text_Timer">
+                            <param id="0" name="Text">zeropad(int(GameTimer/3600% 60), 2) &amp; &quot;:&quot; &amp; zeropad(int(GameTimer/60%60), 2) &amp; newline &amp; &quot;You&apos;re late!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5644219000590829">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2871738262584606" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">39600</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5665123372284038" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">43200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1194246931408114" type="Text_Timer">
+                            <param id="0" name="Text">zeropad(int(GameTimer/3600% 60), 2) &amp; &quot;:&quot; &amp; zeropad(int(GameTimer/60%60), 2) &amp; newline &amp; &quot;You&apos;re really late...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7525810206926703">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3856094632287952" type="System">
+                            <param id="0" name="Variable">GameTimer</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">43200</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4283363920841318" type="Text_Timer">
+                            <param id="0" name="Text">zeropad(int(GameTimer/3600% 60), 2) &amp; &quot;:&quot; &amp; zeropad(int(GameTimer/60%60), 2) &amp; newline &amp; &quot;You might get fired...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
