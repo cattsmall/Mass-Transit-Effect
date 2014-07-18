@@ -84,7 +84,7 @@
                 <event-block sid="1717715007861003">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="3886536459716898" type="Player">
-                            <param id="0" name="Instance variable">MovementEnabled</param>
+                            <param id="0" name="Instance variable">movementEnabled</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -550,6 +550,10 @@
                                     <param id="0" name="Animation">&quot;Angry&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="7562501943419334" type="Player">
+                                    <param id="0" name="Instance variable">movementEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="6564790921006974" type="System">
                                     <param id="0" name="Variable">PlayerLocationX</param>
                                     <param id="1" name="Value">Player.X</param>
@@ -559,7 +563,7 @@
                                     <param id="1" name="Value">Player.Y</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="879364423621876" type="System">
-                                    <param id="0" name="Seconds">1</param>
+                                    <param id="0" name="Seconds">0.25</param>
                                 </action>
                                 <action id="-26" name="Move to layer" sid="1916515416534882" type="SceneFadeIn">
                                     <param id="0" name="Layer">2</param>

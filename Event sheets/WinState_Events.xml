@@ -57,7 +57,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="8785565877322804" type="Text_Title">
-                    <param id="0" name="Text">&quot;&quot;&quot;Glad you weren&apos;t late again today.&quot;&quot;&quot;</param>
+                    <param id="0" name="Text">&quot;&quot;&quot;Wow, you&apos;re not late today!&quot;&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>

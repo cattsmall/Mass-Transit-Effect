@@ -10,7 +10,7 @@
             </conditions>
             <actions>
                 <action id="-13" name="Set boolean" sid="2108331185909307" type="Player">
-                    <param id="0" name="Instance variable">MovementEnabled</param>
+                    <param id="0" name="Instance variable">movementEnabled</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
@@ -20,6 +20,9 @@
             <conditions>
                 <condition id="0" name="On collision with another object" sid="1817992998020305" type="Player">
                     <param id="0" name="Object">PortalVertical</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="5202910663844609" type="Player">
+                    <param id="0" name="Instance variable">movementEnabled</param>
                 </condition>
             </conditions>
             <actions>
@@ -32,7 +35,7 @@
                     <param id="1" name="Value">1080</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="3962246785163757" type="Player">
-                    <param id="0" name="Instance variable">MovementEnabled</param>
+                    <param id="0" name="Instance variable">movementEnabled</param>
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-16" name="Wait" sid="1815711153797627" type="System">

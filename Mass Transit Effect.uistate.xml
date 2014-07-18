@@ -21,14 +21,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>LoseState</layout>
         <layout>02_Scene2</layout>
         <layout>03_Scene3</layout>
-        <layout>5_Encounter</layout>
+        <layout active="1">5_Encounter</layout>
         <event-sheet>000_Main_Controls</event-sheet>
         <event-sheet>00_Title_Screen_Events</event-sheet>
         <event-sheet>1_Subway_Entrance_Events</event-sheet>
         <event-sheet>2_Platform_Entrance_Events</event-sheet>
         <event-sheet>3_Inside_Train_Events</event-sheet>
         <event-sheet>4_Platform_Exit_Events</event-sheet>
-        <event-sheet active="1">WinState_Events</event-sheet>
+        <event-sheet>WinState_Events</event-sheet>
         <event-sheet>01_Scene1</event-sheet>
         <event-sheet>5_Encounter_Events</event-sheet>
         <event-sheet>LoseState_Events</event-sheet>

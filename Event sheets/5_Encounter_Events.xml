@@ -8,6 +8,10 @@
                 <condition id="-2" name="On start of layout" sid="4739535882883994" type="System" />
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="4523963483859534" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-13" name="Set boolean" sid="1814416255717675" type="Player">
                     <param id="0" name="Instance variable">isDead</param>
                     <param id="1" name="Value">0</param>
@@ -72,8 +76,15 @@
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3889975835236095" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="1662912426824051" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="4" name="Set font color" sid="9346847504297054" type="Text_Encounter_Title">
                     <param id="0" name="Color">rgb(180, 180, 180)</param>
                 </action>
@@ -113,6 +124,10 @@
                         </action>
                         <action id="0" name="Set text" sid="5884214657635271" type="Text_Encounter_Title">
                             <param id="0" name="Text">Text_Encounter_Title.Text &amp; newline &amp; newline &amp; &quot;What will you do next?&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8739800579331082" type="Player">
+                            <param id="0" name="Instance variable">inputEnabled</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -178,8 +193,15 @@
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="9459689018833913" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="1494310254684213" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="4" name="Set font color" sid="7814921785026981" type="Text_Encounter_Title">
                     <param id="0" name="Color">rgb(180, 180, 180)</param>
                 </action>
@@ -215,6 +237,10 @@
                         </action>
                         <action id="0" name="Set text" sid="3303361342123827" type="Text_Encounter_Title">
                             <param id="0" name="Text">Text_Encounter_Title.Text &amp; newline &amp; newline &amp; &quot;What will you do next?&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4910289158401887" type="Player">
+                            <param id="0" name="Instance variable">inputEnabled</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -361,8 +387,15 @@
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="1054525940781913" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="7746882233216804" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="4" name="Set font color" sid="8277611284897057" type="Text_Encounter_Title">
                     <param id="0" name="Color">rgb(180, 180, 180)</param>
                 </action>
@@ -398,6 +431,10 @@
                         </action>
                         <action id="0" name="Set text" sid="3601600730475304" type="Text_Encounter_Title">
                             <param id="0" name="Text">Text_Encounter_Title.Text &amp; newline &amp; newline &amp; &quot;What will you do next?&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5568420525500775" type="Player">
+                            <param id="0" name="Instance variable">inputEnabled</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -544,8 +581,15 @@
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="7449586517919705" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-13" name="Set boolean" sid="8884470167901217" type="Player">
+                    <param id="0" name="Instance variable">inputEnabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-12" name="Subtract from" sid="8300760738270342" type="NPCs">
                     <param id="0" name="Instance variable">angerLevel</param>
                     <param id="1" name="Value">choose(0,3)</param>
@@ -576,6 +620,10 @@
                         </action>
                         <action id="0" name="Set text" sid="3305730974794534" type="Text_Encounter_Title">
                             <param id="0" name="Text">Text_Encounter_Title.Text &amp; newline &amp; newline &amp; &quot;What will you do next?&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8115989017322325" type="Player">
+                            <param id="0" name="Instance variable">inputEnabled</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>

@@ -10,7 +10,7 @@
             </conditions>
             <actions>
                 <action id="-13" name="Set boolean" sid="1240147220508406" type="Player">
-                    <param id="0" name="Instance variable">MovementEnabled</param>
+                    <param id="0" name="Instance variable">movementEnabled</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>

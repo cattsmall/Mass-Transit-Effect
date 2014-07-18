@@ -167,8 +167,9 @@
                         <newX>0</newX>
                         <newY>0</newY>
                         <moveDir></moveDir>
-                        <MovementEnabled>true</MovementEnabled>
+                        <movementEnabled>true</movementEnabled>
                         <isDead>false</isDead>
+                        <inputEnabled>true</inputEnabled>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -187,8 +188,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>140</x>
-                        <y>32</y>
+                        <x>135</x>
+                        <y>-135</y>
                         <z>0</z>
                         <width>270</width>
                         <height>540</height>
